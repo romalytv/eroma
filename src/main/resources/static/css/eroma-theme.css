@@ -1,0 +1,75 @@
+body.eroma-bg {
+    background-color: rebeccapurple;
+}
+
+.eroma-card {
+    max-width: 420px;
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: #c9aee8;
+}
+
+.eroma-title {
+    color: #14532d;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.eroma-subtitle {
+    font-style: italic;
+    color: #14532d;
+    margin-top: -5px;
+}
+
+.eroma-line {
+    border-color: #14532d;
+    opacity: 0.5;
+}
+
+.eroma-section {
+    color: #14532d;
+    margin-bottom: 1rem;
+}
+
+.eroma-label {
+    color: #14532d;
+    font-weight: 500;
+}
+
+.eroma-input {
+    background-color: #c9aee8;
+    border: 2px solid #14532d;
+    color: #14532d;
+}
+
+.eroma-input::placeholder {
+    color: #14532d;
+    opacity: 0.5;
+}
+
+.eroma-button {
+    background-color: #14532d;
+    color: white;
+}
+
+.eroma-button:hover {
+    background-color: #0e3d21;
+    color: white;
+}
+
+.eroma-link {
+    color: #14532d;
+    text-decoration: none;
+}
+
+.eroma-link:hover {
+    text-decoration: underline;
+}
+
+.eroma-table,
+.eroma-table tr,
+.eroma-table td {
+    background-color: #c9aee8 !important;
+}

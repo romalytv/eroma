@@ -1,0 +1,141 @@
+body.eroma-bg {
+    background-color: rebeccapurple;
+}
+
+.eroma-card {
+    max-width: 740px;
+    margin: auto;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: #c9aee8;
+    padding: 1.5rem;
+}
+
+.eroma-title {
+    color: #14532d;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.eroma-subtitle {
+    font-style: italic;
+    color: #14532d;
+    margin-top: -5px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.eroma-section {
+    color: #14532d;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.eroma-table th,
+.eroma-table td {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.9rem;
+}
+
+.eroma-table th {
+    background-color: #bda4e0 !important;
+    color: #14532d;
+}
+
+.eroma-table td {
+    background-color: #c9aee8 !important;
+    color: #1b1b1b;
+}
+
+.eroma-table .form-control {
+    background-color: #fefefe;
+    border: 2px solid #14532d;
+    color: #14532d;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.eroma-table a.btn {
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    border-color: #14532d;
+    color: #14532d;
+}
+
+.eroma-table a.btn:hover {
+    background-color: #14532d;
+    color: white;
+}
+
+.quantity-input.editable {
+    background-color: #fff3cd !important;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
+}
+
+.btn-primary {
+    background-color: #14532d;
+    border-color: #14532d;
+}
+
+.btn-primary:hover {
+    background-color: #0e3d21;
+    border-color: #0e3d21;
+}
+
+.btn-success {
+    background-color: #157347;
+    border-color: #157347;
+}
+
+.btn-danger {
+    background-color: #c03434;
+    border-color: #c03434;
+}
+
+.btn-warning {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: black;
+}
+
+.card-title {
+    color: #14532d;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card-body .form-control {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.card-body button {
+    font-size: 0.85rem;
+}
+
+input::placeholder {
+    color: #14532d;
+    opacity: 0.5;
+}
+
+.nav-link.active-link {
+    font-weight: bold;
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

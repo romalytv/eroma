@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${client.id == null} ? 'Новий клієнт' : 'Редагування клієнта'">Клієнт</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/eroma-inventory.css}">
+</head>
+<body class="eroma-bg">
+
+<!-- Навбар -->
+<nav class="navbar fixed-top" style="background-color: rebeccapurple;">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a href="/dashboard" class="navbar-brand eroma-title text-white mb-0" style="text-decoration: none;">EROMA</a>
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link eroma-link active-link" href="/clients">Клієнти</a></li>
+            <li class="nav-item"><a class="nav-link text-white eroma-link" href="/warehouse">Склад</a></li>
+            <li class="nav-item"><a class="nav-link text-white eroma-link" href="/orders">Облік замовлень</a></li>
+            <li class="nav-item"><a class="nav-link text-white eroma-link" href="/analytics">Аналітика</a></li>
+            <li class="nav-item"><a class="nav-link text-white eroma-link" href="/transactions">Транзакції</a></li>
+            <li class="nav-item"><a class="nav-link text-white eroma-link" href="/logout">Вийти</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Контент -->
+<div class="container py-5 mt-5">
+    <div class="card eroma-card p-4 shadow">
+
+        <h4 class="eroma-section" th:text="${client.id == null} ? '➕ Новий клієнт' : '✏️ Редагувати клієнта'"></h4>
+
+        <form th:action="@{/clients/save}" th:object="${client}" method="post" class="row g-3">
+            <input type="hidden" th:field="*{id}"/>
+
+            <div class="col-md-6">
+                <label class="form-label">Ім’я</label>
+                <input type="text" th:field="*{name}" class="form-control" placeholder="Напр. Олена Петрова" required>
+                <div class="text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" th:field="*{email}" class="form-control" placeholder="example@email.com" required>
+                <div class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Телефон</label>
+                <input type="text" th:field="*{phone}" class="form-control" placeholder="+380..." required>
+                <div class="text-danger" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Адреса</label>
+                <input type="text" th:field="*{address}" class="form-control" placeholder="м. Київ, вул. Прикладна 12">
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Рівень оцінки</label>
+                <select th:field="*{satisfactionScale}" class="form-select" required>
+                    <option th:each="type : ${satisfactionScale}" th:value="${type}" th:text="${type.displayName}"></option>
+                </select>
+            </div>
+
+            <div class="col-12 mt-4 d-flex justify-content-between">
+                <a th:href="@{/clients}" class="btn btn-secondary">← Назад</a>
+                <button type="submit" class="btn btn-primary">💾 Зберегти</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
